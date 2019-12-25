@@ -22,11 +22,8 @@ class api_helper: NSObject {
             case .failure(let error):
                 print(error)
             case .success(let value):
-                //print(value)
+                
                 let json = JSON(value)
-                /*let id1 = json["id"]
-                let title = json["title"]
-                print("id is = \(id1), title is = \(title) ")*/
                 
                guard let dataarr = json.array else{print("error to be array");
                     return }
